@@ -26,6 +26,7 @@
         border-radius: 10px;
         overflow: hidden;
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        width: 100%; /* Ensure container takes full width on small screens */
     }
     .header {
         display: flex;
@@ -40,25 +41,26 @@
     .header-left {
         display: flex;
         align-items: center;
-        flex: 1; /* Allow this section to grow */
+        flex: 1 1 auto; /* Allow this section to grow and shrink */
+        min-width: 200px; /* Minimum width for better stacking */
     }
     .header-left img {
-        width: 111px;
-        height: 130px;
+        width: 100px; /* Adjust for smaller screens */
+        height: auto; /* Maintain aspect ratio */
         object-fit: cover;
         margin-right: 15px;
     }
     .header-left .name {
-        font-size: 1.8em;
+        font-size: 1.6em; /* Adjust font size for mobile */
         font-weight: bold;
     }
     /* Right-side styling for contact info */
-    .header .contact-info {
+    .contact-info {
         text-align: right;
-        flex: 1; /* Allow this section to grow */
-        margin-left: 20px; /* Add margin for spacing */
+        flex: 1 1 auto; /* Allow this section to grow and shrink */
+        min-width: 200px; /* Minimum width for better stacking */
     }
-    .header .contact-info a {
+    .contact-info a {
         color: #ffffff;
         text-decoration: none;
         font-size: 0.9em;
@@ -99,7 +101,7 @@
     }
     
     /* Media Queries for responsiveness */
-    @media (max-width: 600px) {
+    @media (max-width: 768px) {
         .header {
             flex-direction: column; /* Stack elements vertically */
             align-items: flex-start; /* Align items to start */
@@ -109,17 +111,26 @@
         }
         .header-left img {
             width: 80px; /* Adjust image size for mobile */
-            height: auto; /* Keep aspect ratio */
         }
         .header-left .name {
-            font-size: 1.5em; /* Adjust font size for mobile */
+            font-size: 1.4em; /* Adjust font size for mobile */
         }
         .contact-info {
             text-align: left; /* Align text to the left */
             width: 100%; /* Use full width on mobile */
         }
     }
+    
+    @media (max-width: 480px) {
+        .header-left .name {
+            font-size: 1.2em; /* Further adjust for very small screens */
+        }
+        .contact-info a {
+            font-size: 0.8em; /* Adjust link sizes */
+        }
+    }
 </style>
+
 
     </head>
     <body>
