@@ -111,31 +111,18 @@ header a:hover {
     background-color: #ffdd57;
     color: #35495e;
 }
-
-/* Adjusting main content for the navbar */
-main {
-    margin-left: 210px; /* Make space for the vertical navbar */
-    padding: 20px;
-    transition: margin-left 0.3s ease;
+/* Make the Home link static */
+.vertical-navbar .nav-link[href="#home"] {
+    background-color: transparent; /* Ensure it doesn't have a hover background */
+    color: white; /* Maintain the text color */
+    /* pointer-events: none; Disable interaction if needed */
 }
 
-@media (max-width: 600px) {
-    .vertical-navbar {
-        width: 100%;
-        height: auto;
-        position: relative;
-    }
-
-    .vertical-navbar .nav-link {
-        font-size: 1rem;
-    }
-
-    /* Adjust main content for smaller screens */
-    main {
-        margin-left: 0;
-    }
+/* Disable hover effect for the Home link */
+.vertical-navbar .nav-link[href="#home"]:hover {
+    background-color: transparent;
+    color: white;
 }
-
 /* Professional Summary Styles */
 .professional-summary ul li {
     display: grid;
@@ -544,4 +531,27 @@ main {
 /* Smooth Scrolling */
 html {
     scroll-behavior: smooth;
+}
+/* Adjusting main content for the navbar */
+main {
+    margin-left: 210px; /* Make space for the vertical navbar */
+    padding: 20px;
+    transition: margin-left 0.3s ease;
+}
+
+@media (max-width: 600px) {
+    .vertical-navbar {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+
+    .vertical-navbar .nav-link {
+        font-size: 1rem;
+    }
+
+    /* Adjust main content for smaller screens */
+    main {
+        margin-left: 0;
+    }
 }
