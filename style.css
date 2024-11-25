@@ -123,6 +123,13 @@ header a:hover {
     background-color: transparent;
     color: white;
 }
+.professional-summary {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #f4f4f4; /* Matches other sections */
+    border-radius: 8px;       /* Rounds the corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adds subtle shadow */
+}
 /* Professional Summary Styles */
 .professional-summary ul li {
     display: grid;
