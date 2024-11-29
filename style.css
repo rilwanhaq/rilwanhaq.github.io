@@ -3,10 +3,16 @@ body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
+    background: #e0e0e0;  /* Fallback color */
     background: linear-gradient(135deg, #f9f9f9, #e0e0e0);
     color: #333;
     display: flex;
     flex-direction: column;
+}
+.container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto; /* Ensure it's centered */
 }
 
 /* Header Styles */
@@ -44,6 +50,7 @@ header .container {
 
 .header-left .profile-pic:hover {
     transform: scale(1.1);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
 
 .header-right {
@@ -123,6 +130,7 @@ header a:hover {
     background-color: transparent;
     color: white;
 }
+
 .professional-summary {
     margin-top: 30px;
     padding: 20px;
@@ -130,6 +138,7 @@ header a:hover {
     border-radius: 8px;       /* Rounds the corners */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adds subtle shadow */
 }
+
 /* Professional Summary Styles */
 .professional-summary ul li {
     display: grid;
@@ -208,64 +217,88 @@ header a:hover {
     color: #35495e;
 }
  /* Experience Section */
-.experience {
+ .experience {
     margin-top: 30px;
     padding: 20px;
     background-color: #f4f4f4;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
-
-.experience h2 {
-    font-size: 1.8rem;
-    color: #35495e;
-    margin-bottom: 15px;
+.experience-section {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #f4f4f4; /* Matches other sections */
+    border-radius: 8px;        /* Rounds the corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adds subtle shadow */
 }
 
-.experience .job {
+/* Individual experience cards */
+.experience-card {
     margin-bottom: 20px;
+    padding: 20px;
+    background-color: #fff;    /* White background for cards */
+    border-radius: 8px;        /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: transform 0.3s ease;
 }
 
-.experience .job h3 {
-    font-size: 1.4rem;
-    color: #2c3e50;
-    margin-bottom: 5px;
+/* Hover effect for experience cards */
+.experience-card:hover {
+    transform: scale(1.02); /* Slightly zoom effect on hover */
 }
 
-.experience .job .company {
-    font-size: 1rem;
+/* Title and details within each experience card */
+.experience-card h3 {
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+    color: #35495e;
+}
+
+.experience-card .company {
+    font-size: 1.2rem;
     color: #7f8c8d;
 }
 
-.experience .job .duration {
-    font-size: 0.9rem;
+.experience-card .duration {
+    font-size: 1rem;
     color: #95a5a6;
     margin-top: 5px;
 }
 
-.experience .job p {
-    font-size: 1rem;
-    line-height: 1.6;
-    color: #555;
-}
-
-.experience .job ul {
+/* Job responsibilities list */
+.experience-card ul {
     list-style-type: none;
-    padding: 0;
+    padding-left: 20px;
+    margin-top: 15px;
 }
 
-.experience .job ul li {
+.experience-card ul li {
     font-size: 1rem;
     color: #555;
-    margin-left: 20px;
+    margin-bottom: 10px;
     position: relative;
 }
 
-.experience .job ul li::before {
-    content: "\2022"; /* Bullet symbol */
+.experience-card ul li::before {
+    content: "\2022"; 
     position: absolute;
     left: -15px;
-    color: #3498db; /* Bullet color */
+    color: #3498db; /* Blue bullet for each responsibility */
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+    .experience-card {
+        padding: 15px;
+    }
+
+    .experience-card h3 {
+        font-size: 1.3rem;  /* Adjust heading size for smaller screens */
+    }
+
+    .experience-card ul li {
+        font-size: 0.95rem; /* Adjust list items for smaller screens */
+    }
 }
 
 /* Education Section */
@@ -375,7 +408,7 @@ header a:hover {
 /* Icon styles for FontAwesome icons */
 .projects .project-links i {
     margin-right: 5px; /* Space between the icon and text */
-    font-size: 1.2rem; /* Icon size */
+    font-size: 1.4rem; /* Icon size */
     transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition for icon's color and scale */
 }
 
@@ -502,38 +535,57 @@ header a:hover {
 
 /* Footer Section */
 .footer-section {
-    background: linear-gradient(135deg, #35495e, #ffdd57);
+    background: linear-gradient(135deg, #35495e, #ffdd57); /* Gradient background */
     color: white;
     text-align: center;
-    padding: 20px 0;
+    padding: 30px 0;
     margin-top: 20px;
     position: relative;
     z-index: 1;
 }
 
-.footer-section .social-links a {
-    margin: 0 10px;
-    display: inline-block;
-    transition: transform 0.3s ease, filter 0.3s ease;
-}
-
-.footer-section .social-links .icon {
-    width: 40px;
-    height: 40px;
-    vertical-align: middle;
-    filter: grayscale(100%);
-    transition: filter 0.3s ease, transform 0.3s ease;
-}
-
-.footer-section .social-links .icon:hover {
-    filter: grayscale(0%);
-    transform: scale(1.2);
-}
-
 .footer-section p {
-    margin: 10px 0 0;
-    font-size: 1rem;
+    margin: 0;
+    font-size: 1.2rem;
 }
+
+.footer-section .social-links {
+    display: flex;
+    justify-content: center;
+    gap: 25px; /* Space between the social icons */
+    margin-top: 10px;
+}
+
+.footer-section .social-links .social-link {
+    font-size: 2rem; /* Icon size */
+    color: white;
+    transition: transform 0.3s ease, filter 0.3s ease, color 0.3s ease;
+}
+
+/* Hover effects */
+.footer-section .social-links .social-link:hover {
+    transform: scale(1.2); /* Slightly enlarge the icon on hover */
+    filter: brightness(1.2); /* Increase brightness on hover */
+    color: #ffdd57; /* Change icon color on hover (Yellow in this case) */
+}
+
+.footer-section .social-links .social-link i {
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* Ensure the footer icons are centered and responsive */
+@media (max-width: 600px) {
+    .footer-section .social-links {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .footer-section .social-links .social-link {
+        font-size: 1.8rem; /* Reduce icon size on smaller screens */
+    }
+}
+
+
 
 /* Smooth Scrolling */
 html {
@@ -556,9 +608,36 @@ main {
     .vertical-navbar .nav-link {
         font-size: 1rem;
     }
+    .skills ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    
 
     /* Adjust main content for smaller screens */
     main {
         margin-left: 0;
     }
 }
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+    
+    .vertical-navbar {
+        width: 100%;
+        position: absolute;
+    }
+
+    main {
+        margin-left: 0;
+        padding: 15px;
+    }
+
+    .experience-card ul li {
+        font-size: 0.9rem;
+    }
+}
+
