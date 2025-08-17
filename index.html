@@ -11,7 +11,7 @@
   <!-- Icons -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet"/>
 
-   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css">
 
   <meta name="description" content="Backend Software Engineer with 3+ years in fintech building scalable microservices & REST APIs in Java, Spring Boot, Node.js. PostgreSQL, MongoDB, AWS, CI/CD, and AI-assisted productivity."/>
 </head>
@@ -188,19 +188,22 @@
         <div class="project">
           <h4>BizPe Backend · ETL · PDF Generation · Notifications</h4>
           <ul class="bullets">
-            <li>Architected Node.js/Express microservices with REST best practices, validation, rate limiting, and structured logging.</li>
-            <li>Built notifications via AWS SNS/SQS/Lambda with retries, DLQ, idempotency, delivery analytics; integrated Meta WhatsApp.</li>
-            <li>Developed Puppeteer-based PDF generation with templating, asset caching, and concurrency control for consistent, fast rendering.</li>
-            <li>Designed ETL/ingestion pipelines; tuned PostgreSQL (indexes, partitions, query plans); managed Flyway migrations.</li>
-            <li>Deployed on AWS (ECS/API Gateway/ALB/CloudWatch) via Jenkins/GitHub Actions enabling zero-downtime deploys and safe rollbacks.</li>
-            <li>Improved reliability with autoscaling, health checks, circuit breakers, blue/green and canary strategies; OAuth2/JWT, RBAC, secrets, audit logs.</li>
-            <li>Used Windsurf, GPT, Perplexity for design spikes, API docs, test scaffolds, SQL tuning hypotheses, log summarization, and runbooks.</li>
-            <li>Stabilized legacy code, fixed critical bugs, and delivered integrations end-to-end.</li>
+            <li>Designed and developed BizPe core backend services primarily in Java/Spring Boot with REST best practices, validation, rate limiting, structured logging, and robust error handling.</li>
+            <li>Built ingestion and ETL workflows; tuned PostgreSQL with indexes, partitions, and query plans; implemented Flyway migrations and data retention policies for reliability and auditability.</li>
+            <li>Implemented event-driven notification services (onboarding, statements, alerts) using AWS SNS/SQS/Lambda with retries, DLQ, idempotency, and delivery analytics; integrated Meta WhatsApp for business messaging.</li>
+            <li>Delivered high-quality PDF generation (statements, reports) using headless Chrome/Puppeteer with templating, asset caching, and concurrency controls for consistent, fast rendering.</li>
+            <li>Deployed on AWS (ECS, API Gateway, ALB, CloudWatch) via Jenkins/GitHub Actions enabling zero-downtime releases and safe rollbacks; added health checks and autoscaling.</li>
+            <li>Improved reliability with circuit breakers, blue/green and canary strategies; enforced OAuth2/JWT, RBAC, secrets management, and audit logs aligned to fintech standards.</li>
+            <li>Built targeted Node.js/Express microservices as required to satisfy specific business integrations, maintaining parity on observability and security with the Java services.</li>
+            <li>Leveraged AI tools (Windsurf, GPT, Perplexity) for design spikes, API docs, test scaffolds, SQL tuning hypotheses, log summarization, and runbooks to accelerate delivery.</li>
+            <li>Stabilized legacy code, fixed critical defects, and shipped integrations end-to-end; improved operability and developer ergonomics across modules.</li>
           </ul>
           <div class="stack">
-            <span>Node.js</span><span>Express</span><span>PostgreSQL</span><span>MongoDB</span>
-            <span>AWS</span><span>Lambda</span><span>SNS/SQS</span><span>ECS</span><span>API Gateway</span>
-            <span>ALB</span><span>CloudWatch</span><span>Puppeteer</span><span>GitHub Actions</span><span>Jenkins</span>
+            <span>Java</span><span>Spring Boot</span><span>Node.js</span><span>Express</span>
+            <span>PostgreSQL</span><span>MongoDB</span><span>AWS</span><span>Lambda</span>
+            <span>SNS/SQS</span><span>ECS</span><span>API Gateway</span><span>ALB</span>
+            <span>CloudWatch</span><span>Puppeteer</span><span>GitHub Actions</span><span>Jenkins</span>
+            <span>Flyway</span>
           </div>
         </div>
       </article>
@@ -370,5 +373,3 @@
   </script>
 </body>
 </html>
-
-
