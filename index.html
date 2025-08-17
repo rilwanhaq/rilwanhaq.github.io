@@ -1,304 +1,373 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resume - Ahmad Rilwan Haq</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Ahmad Rilwan Haq — Backend Software Engineer</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet"/>
+
+  <!-- Icons -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet"/>
+
+  <link rel="stylesheet" href="style.css"/>
+
+  <meta name="description" content="Backend Software Engineer with 3+ years in fintech building scalable microservices & REST APIs in Java, Spring Boot, Node.js. PostgreSQL, MongoDB, AWS, CI/CD, and AI-assisted productivity."/>
 </head>
 <body>
-    <header id="home">
-        <div class="container" >
-            <div class="header-left">
-                <img src="https://github.com/rilwanhaq/rilwanhaq.github.io/blob/main/Rilwan.jpeg?raw=true" alt="Rilwan's Photo" class="profile-pic">
-            </div>
-            <div class="header-right">
-                <h1>Ahmad Rilwan Haq</h1>
-                <p>Email: <a href="mailto:rilwanhaq@gmail.com">rilwanhaq@gmail.com</a></p>
-                <p>Mobile: +91-8722442313</p>
-            </div>
+  <!-- Ambient gradient glow for depth -->
+  <div class="ambient ambient-a"></div>
+  <div class="ambient ambient-b"></div>
+
+  <!-- Floating Nav Rail with progress indicator -->
+  <aside class="rail" aria-label="Section navigation">
+    <a href="#home" class="dot active" data-label="Home" aria-label="Home"></a>
+    <a href="#summary" class="dot" data-label="Summary" aria-label="Summary"></a>
+    <a href="#skills" class="dot" data-label="Skills" aria-label="Skills"></a>
+    <a href="#experience" class="dot" data-label="Experience" aria-label="Experience"></a>
+    <a href="#projects" class="dot" data-label="Projects" aria-label="Projects"></a>
+    <a href="#education" class="dot" data-label="Education" aria-label="Education"></a>
+    <a href="#languages" class="dot" data-label="Languages" aria-label="Languages"></a>
+    <a href="#contact" class="dot" data-label="Socials" aria-label="Socials"></a>
+    <span class="progress"></span>
+  </aside>
+
+  <!-- Hero -->
+  <header id="home" class="hero" role="banner">
+    <div class="hero-inner">
+      <div class="hero-card glass rise">
+        <div class="hero-left">
+          <img src="https://github.com/rilwanhaq/rilwanhaq.github.io/blob/main/Rilwan.jpeg?raw=true" alt="Portrait of Ahmad Rilwan Haq" class="avatar" loading="eager"/>
         </div>
-    </header>
-     <!-- Vertical Navbar -->
-    <div class="vertical-navbar">
-        <a href="#home" class="nav-link"><i class="fas fa-home"></i> Home</a>
-        <a href="#summary" class="nav-link active"><i class="fas fa-user-tie"></i> Summary</a>
-        <a href="#skills" class="nav-link"><i class="fas fa-laptop-code"></i> Skills</a>
-        <a href="#experience" class="nav-link"><i class="fas fa-briefcase"></i> Experience</a>
-        <a href="#education" class="nav-link"><i class="fas fa-graduation-cap"></i> Education</a>
-        <a href="#projects" class="nav-link"><i class="fas fa-project-diagram"></i> Projects</a>
-        <a href="#contact" class="nav-link"><i class="fas fa-share-alt"></i> Socials</a>
+        <div class="hero-right">
+          <h1 class="title">Ahmad <span>Rilwan</span> Haq</h1>
+          <p class="subtitle">Backend Software Engineer — Java · Spring Boot · Node.js · PostgreSQL · MongoDB · AWS</p>
+
+          <div class="badges">
+            <span class="badge">Fintech</span>
+            <span class="badge">Microservices</span>
+            <span class="badge">REST APIs</span>
+            <span class="badge">ETL</span>
+            <span class="badge">PDF Generation</span>
+            <span class="badge">Notifications</span>
+            <span class="badge">CI/CD</span>
+            <span class="badge">Cloud</span>
+          </div>
+
+          <div class="cta">
+            <a href="#contact" class="btn primary">
+              <i class="fa-solid fa-paper-plane"></i>
+              Contact
+            </a>
+            <a href="#projects" class="btn ghost">
+              <i class="fa-solid fa-diagram-project"></i>
+              Projects
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Accent stat chips for immediate impact -->
+      <div class="impact-row">
+        <div class="impact chip glass"><span class="value">40%</span><span class="label">P95 latency cut</span></div>
+        <div class="impact chip glass"><span class="value">99.9%</span><span class="label">Service uptime</span></div>
+        <div class="impact chip glass"><span class="value">2</span><span class="label">Engineers led</span></div>
+        <div class="impact chip glass"><span class="value">5+</span><span class="label">Modules owned</span></div>
+      </div>
     </div>
-    <main>
-        <section class="professional-summary" id="summary">
-            <h2><i class="fas fa-user-tie"></i> Professional Summary</h2>
-            <ul>
-                <li>
-                    <i class="fas fa-clipboard-list"></i>
-                    <strong>Experience:</strong>
-                    Around 2+ years of hands-on experience in developing and delivering back-end applications using Java and Node.js technologies, with expertise in back-end development for finance domains.
-                </li>
-                <li>
-                    <i class="fas fa-tasks"></i>
-                    <strong>Responsibilities:</strong>
-                    Involved in all phases of SDLC, including requirements gathering, technical design, development, testing, deployment, and maintenance. Worked closely with cross-functional teams following Agile methodology to deliver robust, scalable applications. Strong understanding of CI/CD pipelines and DevOps principles.
-                </li>
-                <li>
-                    <i class="fas fa-server"></i>
-                    <strong>Back-End Development:</strong>
-                    Extensive experience in Java (Java 8-21), Spring Boot, Node.js, RESTful APIs, and microservices architecture. Proficient in database design and development using NoSQL (MongoDB). Skilled in writing optimized queries and handling data in various formats (JSON, XML).
-                </li>
-                <li>
-                    <i class="fas fa-code-branch"></i>
-                    <strong>Version Control and Build Tools:</strong>
-                    Experience with Git for version control, Jenkins for CI/CD integration, and Maven for build automation.
-                </li>
-                <li>
-                    <i class="fas fa-cloud-upload-alt"></i>
-                    <strong>Cloud and DevOps:</strong>
-                    Exposure to cloud platforms like AWS and Azure for deploying scalable applications. Knowledge of Docker for containerization.
-                </li>
-                <li>
-                    <i class="fas fa-tools"></i>
-                    <strong>Tools:</strong>
-                    Familiar with tools like IntelliJ IDEA, Visual Studio Code, Asana, Studio 3T, Apache JMeter, Jasper Report, Postman, Jenkins, SonarLint, and SonarQube for code quality and continuous integration.
-                </li>
-            </ul>
-        </section>
-        <section class="skills" id="skills">
-            <h2><i class="fas fa-laptop-code"></i>Technical Skills</h2>
-            <div class="skills-container">
-                <div class="skills-category">
-                    <h3>Programming Languages</h3>
-                    <ul>
-                        <li>Core Java (Java 8-21)</li>
-                        <li>Node.js</li>
-                        <li>JavaScript</li>
-                        <li>Python</li>
-                    </ul>
-                </div>
-                <div class="skills-category">
-                    <h3>Frameworks & Technologies</h3>
-                    <ul>
-                        <li>Spring Boot</li>
-                        <li>Spring Security</li>
-                        <li>Microservices</li>
-                    </ul>
-                </div>
-                <div class="skills-category">
-                    <h3>Databases & Messaging</h3>
-                    <ul>
-                        <li>MongoDB</li>
-                        <li>Kafka</li>
-                    </ul>
-                </div>
-                <div class="skills-category">
-                    <h3>Cloud & Tools</h3>
-                    <ul>
-                        <li>AWS</li>
-                        <li>Git</li>
-                        <li>Azure</li>
-                        <li>Docker</li>
-                        <li>IntelliJ IDEA</li>
-                        <li>Visual Studio Code</li>
-                        <li>Postman</li>
-                        <li>JUnit5</li>
-                        <li>Apache JMeter</li>
-                        <li>Jasper Report</li>
-                        <li>Jenkins</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-        <section class="experience" id="experience">
-            <div class="experience-card">
-                <h2><i class="fas fa-briefcase"></i> Professional Experience</h2>
-            <ul>
-                <li>
-                    <i class="fas fa-briefcase"></i>
-                    <strong>Job Title:</strong> Software Development Engineer
-                </li>
-                <li>
-                    <i class="fas fa-building"></i>
-                    <strong>Company:</strong> Figital Technologies, Chennai, Tamil Nadu
-                </li>
-                <li>
-                    <i class="fas fa-calendar-alt"></i>
-                    <strong>Duration:</strong> May 2022 - Present
-                </li>
-            </ul>
-                <h3>Project: Ncash - Detax, Wealth, NPS, Account Aggregator, and Rewards</h3>
-                <ul>
-                    <li>
-                        <strong>Architecture Design:</strong> Developed and implemented database architecture and workflows for Detax, Rewards, and Wealth features from scratch, ensuring scalability and performance.
-                    </li>
-                    <li>
-                        <strong>Lead Roles:</strong> Managed a team of 2, ensuring all development tasks meet quality criteria through test planning, execution, quality assurance, and issue tracking.
-                    </li>
-                    <li>
-                        <strong>API Optimization:</strong> Optimized existing REST APIs, reducing response time by nearly 40% through indexing and efficient algorithms.
-                    </li>
-                    <li>
-                        <strong>Back-End Expertise:</strong> Built efficient RESTful APIs using frameworks like Spring Boot, ensuring high-performance and scalable backend systems for diverse business needs.
-                    </li>
-                    <li>
-                        <strong>Database Management:</strong> Designed and optimized database schemas, executed complex queries, and maintained data integrity for robust and efficient applications.
-                    </li>
-                    <li>
-                        <strong>Tools and Technologies:</strong>
-                        <ul>
-                            <li>Java & Spring Boot for web development</li>
-                            <li>Node.js for web applications and scripting</li>
-                            <li>JUnit5 for test cases</li>
-                            <li>Diffblue for automated unit test generation</li>
-                            <li>MongoDB for database management</li>
-                        </ul>
-                    </li>
-                    <li>
-                        <strong>Ownership and Innovation:</strong> Fully owned new feature development, proactively addressed evolving business requirements, and delivered innovative solutions exceeding expectations.
-                    </li>
-                </ul>
-            </div>
-        </section>
-        <section class="education" id="education">
-            <h2><i class="fas fa-graduation-cap"></i> Education</h2>
-            <ul>
-                <li class="education-item">
-                    <div class="institution">
-                        <strong>Srinivas Institute of Technology</strong>, Mangalore, Karnataka
-                    </div>
-                    <div class="details">
-                        B.Tech in Computer Science Engineering; CGPA: 6.0 (2016-2021)
-                    </div>
-                </li>
-                <li class="education-item">
-                    <div class="institution">
-                        <strong>St. Philomena PU College</strong>, Mangalore, Karnataka
-                    </div>
-                    <div class="details">
-                        Class XII - PCM with Computer Science; Percentage: 60% (2014-2016)
-                    </div>
-                </li>
-                <li class="education-item">
-                    <div class="institution">
-                        <strong>B.A. Hajee Mohiudeen English Medium School</strong>, Mangalore, Karnataka
-                    </div>
-                    <div class="details">
-                        SSLC (10th); Percentage: 70% (2013-2014)
-                    </div>
-                </li>
-            </ul>
-        </section>
-        <section class="projects" id="projects">
-            <h2><i class="fas fa-laptop-code"></i> Personal Projects</h2>
-            <ul>
-                <li class="project-item">
-                    <div class="project-info">
-                        <strong>Back-End CRUD API with JWT Authentication</strong> (Python Flask, MongoDB)
-                        <p>Developed a secure REST API for employee management with JWT-based authentication.</p>
-                        <div class="project-links">
-                            <!-- GitHub Link with GitHub Icon -->
-                            <a href="https://github.com/rilwanhaq/Python-Flask-Rest-API-with-JWT.git" target="_blank" class="github-link">
-                                <i class="fab fa-github"></i> GitHub
-                            </a>
-                        </div>
-                    </div>
-                </li>
-                <br>
-                <li class="project-item">
-                    <div class="project-info">
-                        <strong>Laundry Service Application</strong> (React.js, Node.js, MongoDB)
-                        <p>Developed a full-stack application for laundry services.</p>
-                        <div class="project-links">
-                            <!-- GitHub Link with GitHub Icon -->
-                            <a href="https://github.com/rilwanhaq/Laundry-Service.git" target="_blank" class="github-link">
-                                <i class="fab fa-github"></i> GitHub
-                            </a>
-                        </div>
-                    </div>
-                </li>
-            </ul>
-        </section>
-        <section class="languages">
-            <h2><i class="fas fa-language"></i> Languages</h2>
-            <ul>
-                <li>
-                    <span class="language-name">Kannada</span>
-                    <span class="badge native">Native</span>
-                </li>
-                <li>
-                    <span class="language-name">English</span>
-                    <span class="badge professional">Professional</span>
-                </li>
-                <li>
-                    <span class="language-name">Hindi</span>
-                    <span class="badge professional">Professional</span>
-                </li>
-                <li>
-                    <span class="language-name">Tamil</span>
-                    <span class="badge professional">Professional</span>
-                </li>
-                <li>
-                    <span class="language-name">Malayalam</span>
-                    <span class="badge professional">Professional</span>
-                </li>
-            </ul>
-        </section>
-        <section class="interests">
-            <h2><i class="fas fa-heart"></i> Interests</h2>
-            <ul>
-                <li><i class="fas fa-lightbulb"></i> Artificial Intelligence</li>
-                <li><i class="fas fa-book"></i> Reading Tech Articles</li>
-                <li><i class="fas fa-handshake"></i> Volunteering</li>
-            </ul>
-        </section>
-    </main>
-    <section class="footer-section" id="contact">
-        <p>&copy; 2024 Ahmad Rilwan Haq</p><br>
-        <div class="social-links">
-            <a href="https://linkedin.com/in/rilwan-haq" target="_blank" class="social-link">
-                <i class="fab fa-linkedin"></i>
-            </a>
-            <a href="https://github.com/rilwanhaq" target="_blank" class="social-link">
-                <i class="fab fa-github"></i>
-            </a>
+  </header>
+
+  <main role="main">
+    <!-- Summary -->
+    <section id="summary" class="section">
+      <div class="section-head">
+        <h2><i class="fa-solid fa-user-tie"></i> Professional Summary</h2>
+      </div>
+      <div class="grid two">
+        <div class="card glass slide-up">
+          <ul class="bullets">
+            <li>Backend Software Engineer with 3+ years building scalable microservices and REST APIs in fintech using Java (8–24), Spring Boot, and Node.js.</li>
+            <li>Strong in PostgreSQL and MongoDB with hands-on ETL/data pipelines, PDF generation, and notification systems.</li>
+            <li>AWS (API Gateway, Lambda, SQS/SNS, CloudWatch, IAM, Secrets), Docker, Jenkins/GitHub Actions, and Git for secure, observable delivery.</li>
+            <li>AI-assisted development (Windsurf, GPT, Perplexity) to accelerate delivery, documentation, test scaffolds, and incident handling.</li>
+          </ul>
         </div>
+        <div class="card glass slide-up delay-1">
+          <div class="pillgrid">
+            <span class="pill">Spring Boot</span>
+            <span class="pill">Express.js</span>
+            <span class="pill">Swagger/OpenAPI</span>
+            <span class="pill">Kafka</span>
+            <span class="pill">SQS/SNS</span>
+            <span class="pill">CloudWatch</span>
+            <span class="pill">Flyway</span>
+            <span class="pill">JUnit5</span>
+            <span class="pill">SonarQube</span>
+            <span class="pill">Docker</span>
+            <span class="pill">GitHub Actions</span>
+            <span class="pill">Jenkins</span>
+          </div>
+        </div>
+      </div>
     </section>
-    <script>
-        window.addEventListener("scroll", function () {
-            const sections = document.querySelectorAll("section"); // Includes the footer section
-            const navLinks = document.querySelectorAll(".vertical-navbar .nav-link");
-            let currentSection = "";
 
-            // Identify the current visible section
-            sections.forEach((section) => {
-                const sectionTop = section.offsetTop;
-                const sectionHeight = section.offsetHeight;
-                const scrollPosition = window.scrollY + window.innerHeight / 3;
+    <!-- Skills -->
+    <section id="skills" class="section">
+      <div class="section-head">
+        <h2><i class="fa-solid fa-laptop-code"></i> Skills</h2>
+      </div>
+      <div class="grid three">
+        <div class="card glass rise">
+          <h3>Programming</h3>
+          <ul class="chips">
+            <li>Java (8–24)</li><li>JavaScript</li><li>Node.js</li><li>Express.js</li><li>Python</li>
+          </ul>
+        </div>
+        <div class="card glass rise">
+          <h3>Frameworks & Architecture</h3>
+          <ul class="chips">
+            <li>Spring Boot</li><li>Spring Security</li><li>Microservices</li><li>REST APIs</li><li>Swagger/OpenAPI</li>
+          </ul>
+        </div>
+        <div class="card glass rise">
+          <h3>Data</h3>
+          <ul class="chips">
+            <li>PostgreSQL</li><li>MongoDB</li><li>ETL</li><li>Aggregations</li><li>Indexes/Partitions</li><li>Flyway</li>
+          </ul>
+        </div>
+        <div class="card glass rise">
+          <h3>Cloud & DevOps</h3>
+          <ul class="chips">
+            <li>AWS</li><li>Azure</li><li>Docker</li><li>Jenkins</li><li>GitHub Actions</li><li>Git</li>
+          </ul>
+        </div>
+        <div class="card glass rise">
+          <h3>Messaging & Observability</h3>
+          <ul class="chips">
+            <li>Kafka</li><li>SQS/SNS</li><li>CloudWatch</li><li>Structured Logging</li>
+          </ul>
+        </div>
+        <div class="card glass rise">
+          <h3>Quality & Tooling</h3>
+          <ul class="chips">
+            <li>JUnit5</li><li>Postman</li><li>Apache JMeter</li><li>SonarLint</li><li>SonarQube</li>
+            <li>IntelliJ IDEA</li><li>VS Code</li><li>Studio 3T</li><li>Jasper Reports</li><li>Diffblue</li><li>Asana</li>
+          </ul>
+        </div>
+        <div class="card glass rise">
+          <h3>AI Tools</h3>
+          <ul class="chips">
+            <li>Windsurf</li><li>GPT</li><li>Perplexity</li>
+          </ul>
+        </div>
+        <div class="card glass rise">
+          <h3>Soft Skills</h3>
+          <ul class="chips">
+            <li>Communication</li><li>Time Management</li><li>Critical Thinking</li><li>Adaptability</li><li>Leadership</li>
+          </ul>
+        </div>
+      </div>
+    </section>
 
-                // Check visibility of the section
-                if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
-                    currentSection = section.getAttribute("id");
-                }
-            });
+    <!-- Experience -->
+    <section id="experience" class="section">
+      <div class="section-head">
+        <h2><i class="fa-solid fa-briefcase"></i> Experience</h2>
+      </div>
 
-            // Add active class to the appropriate nav-link
-            navLinks.forEach((link) => {
-                link.classList.remove("active"); // Clear all active states
-                const sectionId = link.getAttribute("href").substring(1);
-                if (sectionId === currentSection) {
-                    link.classList.add("active"); // Activate the matching nav-link
-                }
-            });
+      <!-- Collecto -->
+      <article class="experience card glass slide-up">
+        <div class="exp-header">
+          <div>
+            <h3>Software Engineer</h3>
+            <p class="company">Collecto Fintech Solutions Pvt Ltd — Bangalore, Karnataka</p>
+          </div>
+          <div class="period">Jan 2025 — Present</div>
+        </div>
+        <div class="project">
+          <h4>BizPe Backend · ETL · PDF Generation · Notifications</h4>
+          <ul class="bullets">
+            <li>Architected Node.js/Express microservices with REST best practices, validation, rate limiting, and structured logging.</li>
+            <li>Built notifications via AWS SNS/SQS/Lambda with retries, DLQ, idempotency, delivery analytics; integrated Meta WhatsApp.</li>
+            <li>Developed Puppeteer-based PDF generation with templating, asset caching, and concurrency control for consistent, fast rendering.</li>
+            <li>Designed ETL/ingestion pipelines; tuned PostgreSQL (indexes, partitions, query plans); managed Flyway migrations.</li>
+            <li>Deployed on AWS (ECS/API Gateway/ALB/CloudWatch) via Jenkins/GitHub Actions enabling zero-downtime deploys and safe rollbacks.</li>
+            <li>Improved reliability with autoscaling, health checks, circuit breakers, blue/green and canary strategies; OAuth2/JWT, RBAC, secrets, audit logs.</li>
+            <li>Used Windsurf, GPT, Perplexity for design spikes, API docs, test scaffolds, SQL tuning hypotheses, log summarization, and runbooks.</li>
+            <li>Stabilized legacy code, fixed critical bugs, and delivered integrations end-to-end.</li>
+          </ul>
+          <div class="stack">
+            <span>Node.js</span><span>Express</span><span>PostgreSQL</span><span>MongoDB</span>
+            <span>AWS</span><span>Lambda</span><span>SNS/SQS</span><span>ECS</span><span>API Gateway</span>
+            <span>ALB</span><span>CloudWatch</span><span>Puppeteer</span><span>GitHub Actions</span><span>Jenkins</span>
+          </div>
+        </div>
+      </article>
 
-            // Ensure footer gets highlighted if scrolled to the bottom
-            if (window.scrollY + window.innerHeight >= document.body.scrollHeight) {
-                navLinks.forEach((link) => link.classList.remove("active")); // Clear all active states
-                document.querySelector('.nav-link[href="#contact"]').classList.add("active");
-            }
-        });
-    </script>
+      <!-- Figital -->
+      <article class="experience card glass slide-up delay-1">
+        <div class="exp-header">
+          <div>
+            <h3>Software Development Engineer</h3>
+            <p class="company">Figital Technologies — Chennai, Tamil Nadu</p>
+          </div>
+          <div class="period">May 2022 — Dec 2024</div>
+        </div>
+        <div class="project">
+          <h4>Ncash — De’tax, KYC, OCR, Wealth, NPS, Account Aggregator, Rewards</h4>
+          <ul class="bullets">
+            <li>Designed DB architecture and workflows for De’tax, Rewards, and Wealth from scratch for scalability and performance.</li>
+            <li>Optimized Spring Boot REST APIs, reducing P95 latency by ~40% with indexing, caching, and algorithmic improvements; structured tracing/logging.</li>
+            <li>Built and maintained Spring Boot microservices with RESTful interfaces and Swagger/OpenAPI; auth with Spring Security/JWT.</li>
+            <li>Owned MongoDB schema design, aggregations, tuning; implemented migrations and retention policies.</li>
+            <li>Led a team of 2 engineers; Agile planning, QA gates, and issue tracking for reliable delivery.</li>
+            <li>Raised test coverage using JUnit5 and Diffblue; enforced SonarQube quality gates and Jenkins pipelines.</li>
+          </ul>
+          <div class="stack">
+            <span>Java</span><span>Spring Boot</span><span>Spring Security</span><span>Node.js</span>
+            <span>MongoDB</span><span>Kafka</span><span>JWT</span><span>JUnit5</span>
+            <span>Diffblue</span><span>Docker</span><span>Jenkins</span><span>SonarQube</span>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="section">
+      <div class="section-head">
+        <h2><i class="fa-solid fa-diagram-project"></i> Personal Projects</h2>
+      </div>
+      <div class="grid two">
+        <article class="project-card card glass rise">
+          <div class="project-top">
+            <h3>Secure Employee CRUD API</h3>
+            <p class="muted">Python Flask · MongoDB · JWT</p>
+          </div>
+          <p>Employee management REST API with admin roles, JWT-based authentication, and structured logging; includes integration tests and Postman collections.</p>
+          <div class="project-actions">
+            <a class="btn tiny" target="_blank" rel="noopener" href="https://github.com/rilwanhaq/Python-Flask-Rest-API-with-JWT.git"><i class="fa-brands fa-github"></i> GitHub</a>
+          </div>
+        </article>
+
+        <article class="project-card card glass rise">
+          <div class="project-top">
+            <h3>Laundry Service Application</h3>
+            <p class="muted">React.js · Node.js · MongoDB</p>
+          </div>
+          <p>Full-stack app for order management, tracking, and payments with modular services and reusable components for fast iteration.</p>
+          <div class="project-actions">
+            <a class="btn tiny" target="_blank" rel="noopener" href="https://github.com/rilwanhaq/Laundry-Service.git"><i class="fa-brands fa-github"></i> GitHub</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Education -->
+    <section id="education" class="section">
+      <div class="section-head">
+        <h2><i class="fa-solid fa-graduation-cap"></i> Education</h2>
+      </div>
+      <div class="timeline">
+        <div class="timeline-item glass slide-up">
+          <div class="when">Aug 2016 — May 2021</div>
+          <div class="what">
+            <h3>Srinivas Institute of Technology, Mangalore</h3>
+            <p>B.Tech in Computer Science & Engineering — CGPA: 6.0</p>
+          </div>
+        </div>
+        <div class="timeline-item glass slide-up">
+          <div class="when">Jun 2014 — Apr 2016</div>
+          <div class="what">
+            <h3>St. Philomena PU College, Mangalore</h3>
+            <p>Pre-University (PCM + CS) — 60%</p>
+          </div>
+        </div>
+        <div class="timeline-item glass slide-up">
+          <div class="when">Jun 2013 — Apr 2014</div>
+          <div class="what">
+            <h3>B.A. Hajee Mohiudeen English Medium School, Mangalore</h3>
+            <p>SSLC — 70%</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Languages -->
+    <section id="languages" class="section">
+      <div class="section-head">
+        <h2><i class="fa-solid fa-language"></i> Languages</h2>
+      </div>
+      <ul class="lang-list rise">
+        <li><span>Kannada</span><em class="badge-lite">Native</em></li>
+        <li><span>English</span><em class="badge-lite">Professional</em></li>
+        <li><span>Hindi</span><em class="badge-lite">Professional</em></li>
+        <li><span>Tamil</span><em class="badge-lite">Professional</em></li>
+        <li><span>Malayalam</span><em class="badge-lite">Professional</em></li>
+      </ul>
+    </section>
+
+    <!-- Socials -->
+    <section id="contact" class="section">
+      <div class="section-head">
+        <h2><i class="fa-solid fa-share-nodes"></i> Socials</h2>
+      </div>
+      <div class="socials card glass rise">
+        <a class="social" target="_blank" rel="noopener" href="https://linkedin.com/in/rilwan-haq">
+          <i class="fa-brands fa-linkedin"></i><span>LinkedIn</span>
+        </a>
+        <a class="social" target="_blank" rel="noopener" href="https://github.com/rilwanhaq">
+          <i class="fa-brands fa-github"></i><span>GitHub</span>
+        </a>
+        <a class="social" href="mailto:rilwanhaq@gmail.com">
+          <i class="fa-regular fa-envelope"></i><span>Email</span>
+        </a>
+        <a class="social" href="tel:+918722442313">
+          <i class="fa-solid fa-phone"></i><span>Call</span>
+        </a>
+      </div>
+      <footer class="footer">
+        <p>© 2025 Ahmad Rilwan Haq</p>
+      </footer>
+    </section>
+  </main>
+
+  <script>
+    // Section spy + progress bar
+    const dots = document.querySelectorAll('.rail .dot');
+    const sections = [...document.querySelectorAll('header, section')];
+    const progress = document.querySelector('.rail .progress');
+
+    function spy(){
+      const scrollTop = window.scrollY || document.documentElement.scrollTop;
+      const docH = document.body.scrollHeight - window.innerHeight;
+      const ratio = Math.max(0, Math.min(1, docH ? scrollTop / docH : 0));
+      progress.style.height = (ratio * 100) + '%';
+
+      const pos = scrollTop + window.innerHeight * 0.35;
+      let current = sections[0].id;
+      for (const s of sections){
+        const top = s.offsetTop;
+        const h = s.offsetHeight;
+        if (pos >= top && pos < top + h){ current = s.id; }
+      }
+      dots.forEach(d => d.classList.toggle('active', d.getAttribute('href') === '#' + current));
+    }
+    document.addEventListener('scroll', spy, { passive: true });
+    window.addEventListener('load', spy);
+
+    // Smooth scroll
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', e => {
+        const id = a.getAttribute('href').slice(1);
+        const el = document.getElementById(id);
+        if (el){
+          e.preventDefault();
+          el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+  </script>
 </body>
 </html>
+
