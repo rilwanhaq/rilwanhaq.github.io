@@ -242,3 +242,93 @@ body {
 .slide-up{animation:slideUp .7s ease both;}
 .delay-1{animation-delay:.12s;}
 .delay-2{animation-delay:.24s;}
+
+
+/* === Clean, consistent padding for key sections === */
+
+/* Primary sections by ID (common patterns in your HTML) */
+#summary,
+#professional-summary,
+#experience,
+#skills,
+#projects,
+#personal-projects {
+  padding: var(--pad-8, 24px);
+}
+
+/* Class-based fallbacks if sections use classes instead of IDs */
+.summary,
+.professional-summary,
+.experience,
+.skills,
+.projects,
+.personal-projects,
+.content-section {
+  padding: var(--pad-8, 24px);
+}
+
+/* Semantic <section> default padding to catch any missed blocks */
+section {
+  padding: var(--pad-8, 24px);
+}
+
+/* Avoid double horizontal padding when nested inside a .section wrapper */
+.section > section,
+.section > .content-section,
+.section > #summary,
+.section > #professional-summary,
+.section > #experience,
+.section > #skills,
+.section > #projects,
+.section > #personal-projects {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+/* Headline spacing for cleaner visual rhythm */
+.section-head,
+#summary .section-head,
+#experience .section-head,
+#skills .section-head,
+#projects .section-head {
+  padding-bottom: var(--pad-4, 14px);
+}
+.section h2,
+#summary h2,
+#experience h2,
+#skills h2,
+#projects h2 {
+  margin-bottom: var(--pad-4, 14px);
+}
+
+/* Cards and inner content often used within these sections */
+#summary .card,
+#experience .card,
+#skills .card,
+#projects .card,
+.personal-projects .project-card,
+.experience .timeline-item {
+  padding: var(--pad-6, 18px);
+}
+
+/* Mobile refinements */
+@media (max-width: 720px) {
+  #summary,
+  #professional-summary,
+  #experience,
+  #skills,
+  #projects,
+  #personal-projects,
+  .summary,
+  .professional-summary,
+  .experience,
+  .skills,
+  .projects,
+  .personal-projects,
+  section,
+  .content-section {
+    padding: var(--pad-6, 18px);
+  }
+}
+
+
